@@ -26,7 +26,7 @@ module.exports = class LocationsPoller {
    * @return {Promise}
    */
   get (addr) {
-    return Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       // If in cache, resolve it.
       if (this.cache[addr]) {
         return resolve(this.cache[addr])
