@@ -1,0 +1,38 @@
+{
+  "name": "ipfs-locations",
+  "version": "1.0.0",
+  "description": "IPFS Locations Poller",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hacdias/ipfs-locations.git"
+  },
+  "keywords": [
+    "ipfs",
+    "locations",
+    "poller",
+    "decentralized",
+    "events",
+    "geoip"
+  ],
+  "author": "Henrique Dias <hacdias@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hacdias/ipfs-locations/issues"
+  },
+  "homepage": "https://github.com/hacdias/ipfs-locations#readme",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "ipfs-geoip": "^2.3.0"
+  },
+  "devDependencies": {
+    "pre-commit": "^1.2.2",
+    "standard": "^10.0.3"
+  },
+  "scripts": {
+    "lint": "standard"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}
