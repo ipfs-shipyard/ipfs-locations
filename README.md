@@ -15,10 +15,9 @@ npm install --save ipfs-locations
 
 ### Class `LocationsPoller`
 
-#### `new LocationsPoller(ipfs, [concurrent])`
+#### `new LocationsPoller(ipfs)`
 
 - `ipfs` Object. [IPFS API Object](https://github.com/ipfs/js-ipfs-api).
-- `concurrent` Integer (optional). How many locations to fetch simultaneously. Defaults to `10`.
 
 #### Methods
 

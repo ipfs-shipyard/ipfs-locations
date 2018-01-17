@@ -6,7 +6,7 @@ module.exports = class LocationsPoller {
    * Locations Poller constructor.
    * @param {IpfsApi} ipfs
    */
-  constructor (ipfs, concurrent = 10) {
+  constructor (ipfs) {
     if (!ipfs) {
       throw new Error('ipfs argument missing')
     }
