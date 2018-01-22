@@ -1,3 +1,5 @@
+'use strict'
+
 const lookupPretty = require('ipfs-geoip').lookupPretty
 const debug = require('debug')('locations-poller')
 
@@ -71,6 +73,7 @@ module.exports = class LocationsPoller {
    * Looks up for an address
    * @private
    * @param {String} addr
+   * @return {Void}
    */
   lookup (addr) {
     if (addr !== this.fetching && !this.pending.includes(addr)) {
@@ -81,6 +84,7 @@ module.exports = class LocationsPoller {
   /**
    * The internal poller function.
    * @private
+   * @return {Void}
    */
   poller () {
     const next = () => {

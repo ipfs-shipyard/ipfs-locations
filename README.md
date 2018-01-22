@@ -1,17 +1,37 @@
 # ipfs-locations
 
 [![npm](https://img.shields.io/npm/v/ipfs-locations.svg?style=flat-square)](https://www.npmjs.com/package/ipfs-locations)
-[![Travis](https://img.shields.io/travis/hacdias/ipfs-locations.svg?style=flat-square)](https://travis-ci.org/hacdias/ipfs-locations)
+[![Travis](https://img.shields.io/travis/ipfs-shipyard/ipfs-locations.svg?style=flat-square)](https://travis-ci.org/ipfs-shipyard/ipfs-locations)
 
-This lets you poll locations from IPFS very easily. This is used by [`ipfs-stats`](https://github.com/hacdias/ipfs-stats) to manage hundreds of location lookups. It looks up locations sequentially to improve the performance and avoid too many requests at once.
+This lets you poll locations from IPFS very easily. This is used by [`ipfs-stats`](https://github.com/ipfs-shipyard/ipfs-stats) to manage hundreds of location lookups. It looks up locations sequentially to improve the performance and avoid too many requests at once.
 
 ## Install
 
-```
-npm install --save ipfs-locations
+### In Node.js through npm
+
+```bash
+$ npm install --save ipfs-locations
 ```
 
-## Documentation
+### Browser: Browserify, Webpack, other bundlers
+
+The code published to npm that gets loaded on require is in fact an ES5 transpiled version with the right shims added. This means that you can require it and use with your favorite bundler without having to adjust asset management process.
+
+```js
+const LocationsPoller = require('ipfs-locations')
+```
+
+### In the Browser through `<script>` tag
+
+Loading this module through a script tag will make the ```IpfsLocations``` obj available in the global namespace.
+
+```
+<script src="https://unpkg.com/ipfs-locations/dist/index.min.js"></script>
+<!-- OR -->
+<script src="https://unpkg.com/ipfs-locations/dist/index.js"></script>
+```
+
+## API
 
 ### Class `LocationsPoller`
 
