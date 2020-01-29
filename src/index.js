@@ -103,14 +103,12 @@ module.exports = class LocationsPoller {
 
     debug('Fetching location for %s', this.fetching)
 
-    lookupPretty(this.ipfs, this.fetching, (err, result) => {
-      if (err) {
-        next()
-        return debug(err)
-      }
-
-      this.cache[this.fetching] = result
+    try {
+      this.cache[this.fetching] = await lookupPretty(this.ipfs, this.fetching)
       next()
-    })
+    } catch (e) {
+      next()
+      return debug(e)
+    }
   }
 }
