@@ -1,3 +1,5 @@
+## ⚠️ THIS PACKAGE IS NO LONGER MAINTAINED!
+
 # ipfs-locations
 
 [![npm](https://img.shields.io/npm/v/ipfs-locations.svg?style=flat-square)](https://www.npmjs.com/package/ipfs-locations)
